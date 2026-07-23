@@ -1,122 +1,70 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="min-h-screen bg-[#0d1117] text-white">
+      <div className="flex min-h-screen flex-col md:flex-row">
+        <aside className="border-b border-gray-700 bg-[#161b22] p-4 md:w-16 md:border-b-0 md:border-r">
+          <div className="mb-4 text-center text-xl">🤖</div>
+          <div className="hidden md:block space-y-4 text-center text-xs text-gray-400">
+            <div>🏠</div>
+            <div>📁</div>
+            <div>💬</div>
+            <div>⚙️</div>
+          </div>
+        </aside>
 
-      <div className="ticks"></div>
+        <section className="border-b border-gray-700 bg-[#161b22] p-4 md:w-64 md:border-b-0 md:border-r">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
+            Explorer
+          </h2>
+          <div className="space-y-2 text-sm text-gray-300">
+            <div className="rounded bg-[#0f172a] px-3 py-2">src</div>
+            <div className="rounded bg-[#0f172a] px-3 py-2">pages</div>
+            <div className="rounded bg-[#0f172a] px-3 py-2">components</div>
+            <div className="rounded bg-[#0f172a] px-3 py-2">layout</div>
+          </div>
+        </section>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <main className="flex-1 p-4 md:p-6">
+          <div className="rounded-2xl border border-gray-700 bg-[#111827] p-6 shadow-2xl">
+            <h1 className="text-3xl font-bold md:text-5xl">
+              Engineer AI 🚀
+            </h1>
+            <p className="mt-3 text-sm text-gray-400 md:text-base">
+              Premium AI coding workspace
+            </p>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <div className="rounded-xl border border-gray-700 bg-[#0f172a] p-4">
+                <div className="text-sm font-semibold text-gray-300">Chat</div>
+                <div className="mt-2 text-sm text-gray-500">
+                  Ask Engineer AI to build, fix, or explain code.
+                </div>
+              </div>
+
+              <div className="rounded-xl border border-gray-700 bg-[#0f172a] p-4">
+                <div className="text-sm font-semibold text-gray-300">Editor</div>
+                <div className="mt-2 text-sm text-gray-500">
+                  Live code editor will appear here next.
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <aside className="border-t border-gray-700 bg-[#161b22] p-4 md:w-80 md:border-t-0 md:border-l">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
+            AI Chat
+          </h2>
+          <div className="space-y-3 text-sm text-gray-300">
+            <div className="rounded-xl bg-[#0f172a] p-3">
+              Hello! I am Engineer AI.
+            </div>
+            <div className="rounded-xl bg-[#0f172a] p-3">
+              I can help you build your app.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  );
 }
-
-export default App
